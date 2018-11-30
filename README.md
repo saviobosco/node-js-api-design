@@ -5,6 +5,9 @@ API Design with Node V2
 * JavaScript
 * basic HTTP knowledge
 * basic API knowledge
+* User Authentication
+* Api Error Handling
+* Mongoose
 
 ## Dependencies
 * Mongo (if you don't have this, signup for a free mongo DB [at mLab](https://mlab.com/))
