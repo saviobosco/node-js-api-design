@@ -18,3 +18,10 @@ API Design with Node V2
 * Please configure your mongodb in the ```config``` folder.
 * ```npm install``` to install app dependencies.
 * ```npm run test``` to execute test.
+
+## Endpoints 
+* ```GET <url>/api/user``` lists all users 
+* ```POST <url>/api/user creates a new user
+* ```PUT <url>/api/user/:id updates the user record
+* ```DELETE <url>/api/user/:id deletes the specified user
+** creating a new user requires username and passwordHash .

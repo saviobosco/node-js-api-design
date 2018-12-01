@@ -38,7 +38,7 @@ module.exports = {
         }
       ]
     },
-    /*plugins: [
+    plugins: [
       //new StartServerPlugin('server.js'),
       new webpack.NamedModulesPlugin(),
       //new webpack.HotModuleReplacementPlugin(),
@@ -46,7 +46,7 @@ module.exports = {
       new webpack.DefinePlugin({
         'process.env': { BUILD_TARGET: JSON.stringify('server') }
       }),
-      //new webpack.BannerPlugin({ banner: 'require("source-map-support").install();', raw: true, entryOnly: false })
-    ],*/
+      new webpack.BannerPlugin({ banner: 'require("source-map-support").install();', raw: true, entryOnly: false })
+    ],
     output: { path: path.join(__dirname, 'dist'), filename: 'server.js' }
 };
