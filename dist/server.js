@@ -648,7 +648,9 @@ var baseConfig = {
   port: 3000,
   secrets: {},
   db: {
-    url: 'mongodb://localhost:27017/school_management_system'
+    //url: 'mongodb://localhost:27017/school_management_system'
+    url: Object({"BUILD_TARGET":"server"}).MONGODB_URI
+
   }
 };
 
