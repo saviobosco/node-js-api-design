@@ -21,7 +21,8 @@ API Design with Node V2
 
 ## Endpoints 
 * ```GET <url>/api/user``` lists all users 
-* ```POST <url>/api/user creates a new user
-* ```PUT <url>/api/user/:id updates the user record
-* ```DELETE <url>/api/user/:id deletes the specified user
+* ```POST <url>/api/user``` creates a new user
+* ```GET <url>/api/user/:id``` get the user record
+* ```PUT <url>/api/user/:id``` updates the user record
+* ```DELETE <url>/api/user/:id``` deletes the specified user
 ** creating a new user requires username and passwordHash .
