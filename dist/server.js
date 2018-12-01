@@ -647,8 +647,7 @@ var baseConfig = {
   port: 3000,
   secrets: {},
   db: {
-    //url: 'mongodb://localhost:27017/school_management_system'
-    url: 'mongodb://heroku_c29m5v6j:gi360lcbseg601af65rb91n7ml@ds123434.mlab.com:23434/heroku_c29m5v6j'
+    url: 'mongodb://localhost:27017/school_management_system'
   }
 };
 
@@ -745,7 +744,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var server = __WEBPACK_IMPORTED_MODULE_0_http___default.a.createServer(__WEBPACK_IMPORTED_MODULE_1__server__["a" /* default */]);
 var currentApp = __WEBPACK_IMPORTED_MODULE_1__server__["a" /* default */];
-console.log(Object({"BUILD_TARGET":"server"}).PORT);
 
 var port = Object({"BUILD_TARGET":"server"}).PORT || 3000;
 
