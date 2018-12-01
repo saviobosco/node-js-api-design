@@ -9,7 +9,7 @@ const baseConfig = {
   secrets: {},
   db: {
     //url: 'mongodb://localhost:27017/school_management_system'
-    url: process.env.MONGODB_URI
+    url: 'mongodb://heroku_c29m5v6j:gi360lcbseg601af65rb91n7ml@ds123434.mlab.com:23434/heroku_c29m5v6j'
 
   }
 }
