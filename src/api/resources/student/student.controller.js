@@ -2,7 +2,6 @@ import { generateControllers, controllers } from '../../modules/query'
 import { Student } from './student.model'
 
 export const createOne = (model) => (req, res, next) => {
-    console.log("override function")
     let student = {
         id: req.body.id,
         first_name: req.body.first_name,

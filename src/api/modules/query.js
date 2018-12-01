@@ -28,7 +28,6 @@ export const controllers = {
 }
 
 export const createOne = (model) => (req, res, next) => {
-  console.log("main function");
   return controllers.createOne(model, req.body)
     .then(doc => res.status(201).json(doc))
     .catch(error => next(error))
@@ -50,7 +49,8 @@ export const deleteOne = (model) => (req, res, next) => {
 }
 
 export const getOne = (model) => (req, res, next) => {
-  return controllers.getOne(req.docToUpdate)
+  const docToUpdate = req.docFromId
+  return controllers.getOne(docToUpdate)
     .then(doc => res.status(200).json(doc))
     .catch(error => next(error))
 }
@@ -67,7 +67,7 @@ export const findByParam = (model) => (req, res, next, id) => {
       if (!doc) {
         next(new Error('Not Found Error'))
       } else {
-        req.docFromId
+        req.docFromId = doc
         next()
       }
     })

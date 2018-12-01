@@ -259,7 +259,6 @@ var controllers = {
 
 var createOne = function createOne(model) {
   return function (req, res, next) {
-    console.log("main function");
     return controllers.createOne(model, req.body).then(function (doc) {
       return res.status(201).json(doc);
     }).catch(function (error) {
@@ -310,7 +309,8 @@ var deleteOne = function deleteOne(model) {
 
 var getOne = function getOne(model) {
   return function (req, res, next) {
-    return controllers.getOne(req.docToUpdate).then(function (doc) {
+    var docToUpdate = req.docFromId;
+    return controllers.getOne(docToUpdate).then(function (doc) {
       return res.status(200).json(doc);
     }).catch(function (error) {
       return next(error);
@@ -334,7 +334,7 @@ var findByParam = function findByParam(model) {
       if (!doc) {
         next(new Error('Not Found Error'));
       } else {
-        req.docFromId;
+        req.docFromId = doc;
         next();
       }
     }).catch(function (error) {
@@ -382,7 +382,6 @@ var generateControllers = function generateControllers(model) {
 
 var createOne = function createOne(model) {
   return function (req, res, next) {
-    console.log("override function");
     var student = {
       id: req.body.id,
       first_name: req.body.first_name,
