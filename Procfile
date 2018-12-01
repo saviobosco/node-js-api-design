@@ -1,1 +1,1 @@
-web: webpack --colors --progress
+web: node server.js
