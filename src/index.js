@@ -7,6 +7,7 @@ import app from './server'
 
 const server = http.createServer(app)
 let currentApp = app
+console.log(process.env.PORT);
 
 const port = process.env.PORT || 3000
 
