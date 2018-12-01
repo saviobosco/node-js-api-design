@@ -575,7 +575,7 @@ var createOne = function createOne(model) {
     var student = {
       id: req.body.id,
       first_name: req.body.first_name,
-      last_name: req.body.first_name,
+      last_name: req.body.last_name,
       gender: req.body.gender,
       date_of_birth: req.body.date_of_birth,
       class_id: req.body.class_id,
