@@ -748,8 +748,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var server = __WEBPACK_IMPORTED_MODULE_0_http___default.a.createServer(__WEBPACK_IMPORTED_MODULE_1__server__["a" /* default */]);
 var currentApp = __WEBPACK_IMPORTED_MODULE_1__server__["a" /* default */];
 
-server.listen(Object({"BUILD_TARGET":"server"}).PORT, function () {
-	console.log('Server listening on port 3000');
+var port = Object({"BUILD_TARGET":"server"}).PORT || 3000;
+
+server.listen(port, function () {
+	console.log('Server listening on port ' + port);
 });
 
 /*if (module.hot) {
