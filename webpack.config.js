@@ -4,7 +4,7 @@ const nodeExternals = require('webpack-node-externals')
 const StartServerPlugin = require('start-server-webpack-plugin')
 
 module.exports = {
-  entry: ['webpack/hot/poll?1000', './src/index'],
+  entry: [/*'webpack/hot/poll?1000',*/ './src/index'],
   watch: true,
   devtool: 'sourcemap',
   target: 'node',
@@ -39,9 +39,9 @@ module.exports = {
       ]
     },
     plugins: [
-      new StartServerPlugin('server.js'),
+      //new StartServerPlugin('server.js'),
       new webpack.NamedModulesPlugin(),
-      new webpack.HotModuleReplacementPlugin(),
+      //new webpack.HotModuleReplacementPlugin(),
       new webpack.NoEmitOnErrorsPlugin(),
       new webpack.DefinePlugin({
         'process.env': { BUILD_TARGET: JSON.stringify('server') }
